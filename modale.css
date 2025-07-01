@@ -1,0 +1,31 @@
+.modale {
+    background-color: white;
+    border: 2px solid black;
+    width: 230px;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    margin-top: 100px;
+    transform: translateX(-50%);
+    opacity: 0.95;
+}
+
+.top-modale {
+    background-color: grey;
+    display: flex;
+    justify-content: end;
+}
+
+#fermer-modale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:7px;
+    cursor: pointer;
+    background-color: red;
+    margin:0
+}
+
+.message-modale {
+    padding: 10px 10px;
+}

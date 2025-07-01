@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="modale.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="stripe.js"></script>
+    <script src="validation.js"></script>
+    <script src="paiement.js"></script>
+    <script src="modale.js"></script>
+    <script src="event.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="logo">
+                    <div class="d-flex justify-content-center">
+                        <img src="bestflixlogo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row titre">
+
+            <div class="col-lg-6 col-md-12 col-sm-12 widget">
+                <div class="row decalage">
+                    <form action="#">
+                        <label for="">Formule d'abonnement</label><br>
+                        <select id="formule" class="custom-select">
+                            <option selected>Sélectionnez votre formule d'abonnement</option>
+                            <option value="1" date-price="12">Standard 12€/mois</option>
+                            <option value="2" date-price="24">Premium 24€/mois</option>
+                            <option value="3" date-price="50">Platinium 50€/mois</option>
+                        </select>
+
+                        <div class="form-group">
+                            <h3>Information Administrative</h3>
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nom</label>
+                            <input type="text" class="form-control" id="nom" aria-describedby="emailHelp"
+                                placeholder="Nom" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Prénom</label>
+                            <input type="tex" class="form-control" id="prenom" aria-describedby="emailHelp"
+                                placeholder="Prénom" required>
+
+                        </div>
+                        <h2>Adresse</h2>
+                        <div class="form-row">
+                            <div class="col-7">
+                                <input type="text" class="form-control" placeholder="Adresse">
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control" placeholder="City">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Zip">
+                            </div>
+                        </div>
+
+                            
+                    </form>
+                </div>
+            </div>
+            
+            
+            
+            <div class="col-lg-6 col-md-12 col-sm-12 widget">
+                <div class="row decalage">
+                    <div class="recap col-12">
+                        <h2>Panier</h2>
+                        <h3>Formule d'abonnement</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item formule">Choisissez une formule d'abonnement</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="row decalage">
+                    <div class="stripe col-12">
+                        <h3>Paiement</h3>
+                        
+                        <!-- insertion de cardeElement -->
+                        <div id="card-element"></div>
+                        <div id="card-errors"></div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                            <label class="form-check-label" for="gridCheck1">
+                                J'accepte les CGV
+                            </label>
+                        </div>
+                        
+                        <input type="submit" class=" btn btn-primary" value="Valider">
+                        
+                        
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
