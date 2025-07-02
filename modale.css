@@ -1,31 +1,78 @@
 .modale {
     background-color: white;
     border: 2px solid black;
-    width: 230px;
-    position: absolute;
+
     z-index: 5;
-    left: 50%;
-    margin-top: 100px;
-    transform: translateX(-50%);
     opacity: 0.95;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .top-modale {
-    background-color: grey;
+    background-color: rgb(183, 183, 183);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+
 }
 
-#fermer-modale{
+#fermer-modale {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:7px;
+    padding: 7px 12px;
     cursor: pointer;
-    background-color: red;
-    margin:0
+    background-color: rgb(255, 80, 80);
+    margin: 0;
+    border: 1px solid black;
+}
+
+#name-modale {
+    align-items: center;
+    font-weight: bolder;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
 }
 
 .message-modale {
     padding: 10px 10px;
+}
+
+
+
+/* modale animation waitReponse */
+.waitRepons{
+    position:absolute;
+    z-index: 5;
+    padding:20px;
+    left: 50%;
+    top:30%;
+    transform: translateX(-50%);
+}
+
+
+.test,
+.test2 {
+    border: 5px solid rgb(255, 84, 84);
+    width: 120px;
+    height: 80px;
+    border-radius: 100% 0% 100% 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test2 {
+    border: 5px solid rgb(50, 39, 39);
+    position: absolute;
+    transform: translateY(-136%) rotate(90deg);
 }

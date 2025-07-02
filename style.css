@@ -1,3 +1,9 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form {
     padding: 15px;
 }

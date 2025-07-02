@@ -61,7 +61,7 @@ function validFormulaire() {
         if(!valid_cgv){
             message += "-Veuillez accepter les CGV"
         }
-        openModale(message)
+        openModale(message, "Informations manquantes")
     }
 
 

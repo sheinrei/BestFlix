@@ -14,6 +14,6 @@ const cardElement = elements.create('card', {
 });
 
 $(function () {
-// Crée un cardElement (champ carte bancaire)
-            cardElement.mount('#card-element');
-        })
+    // Crée un cardElement (champ carte bancaire)
+    cardElement.mount('#card-element');
+})
